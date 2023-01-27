@@ -1,0 +1,5 @@
+numpy
+pandas==1.5.2
+tifffile==2021.11.2
+ome-types=0.3.2
+pims_nd2=1.1
