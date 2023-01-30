@@ -3,7 +3,7 @@
 """
 .. module:: stitch_tiles_nd2
    :platform: Linux, Windows
-   :synopsis: Script for stiching multiple OME-TIFFs with XY-offsets
+   :synopsis: Script for stitching tiles from ND2 file and writing result to OME-TIFF
 
 .. moduleauthor:: Fredrik Nysjo
 """
@@ -59,7 +59,7 @@ with ND2Reader_SDK(input_filename) as nd2:
     micron_to_pixels = 1.0 / pixels_to_micron
     nd2.iter_axes = "m"
 
-    print("Allocating output image large enough to fit stiched tiles...")
+    print("Allocating output image large enough to fit stitched tiles...")
     x_min, y_min = 999999, 999999
     x_max, y_max = -999999, -999999
     for i in range(0, num_tiles):
