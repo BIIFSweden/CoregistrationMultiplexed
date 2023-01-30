@@ -18,7 +18,7 @@ import os
 
 
 def rgb_to_hex(color):
-    """Convert color from RGB to hexadecimal format using 8 bits per channel"""
+    """Helper function for converting color from RGB to hexadecimal int32 format"""
     r = int(color[0] * 255.99)
     g = int(color[1] * 255.99)
     b = int(color[2] * 255.99)
@@ -31,7 +31,7 @@ input_filename = sys.argv[1]
 z_projection = sys.argv[2] if len(sys.argv) > 2 else "center"
 if ".nd2" not in input_filename:
     sys.exit("Input filename must be an ND2 file")
-output_filename = "stitched.ome.tif"
+output_filename = os.path.splitext(input_filename)[0] + ".ome.tif"
 
 print("Opening ND2 image " + input_filename + "...")
 with ND2Reader_SDK(input_filename) as nd2:
