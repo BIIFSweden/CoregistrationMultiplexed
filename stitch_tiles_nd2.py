@@ -22,7 +22,7 @@ def rgb_to_hex(color):
     r = int(color[0] * 255.99)
     g = int(color[1] * 255.99)
     b = int(color[2] * 255.99)
-    return (r << 24)  + (g << 16) + (b << 8)
+    return np.int32((r << 24)  + (g << 16) + (b << 8))
 
 
 if len(sys.argv) <= 1:
