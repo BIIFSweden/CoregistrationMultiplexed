@@ -22,11 +22,11 @@ def rgb_to_hex(color):
     r = int(color[0] * 255.99)
     g = int(color[1] * 255.99)
     b = int(color[2] * 255.99)
-    return np.int32((r << 24)  + (g << 16) + (b << 8))
+    return np.int32((r << 24) + (g << 16) + (b << 8))
 
 
 if len(sys.argv) <= 1:
-    sys.exit("Usage: ./stitch_tiles.py input_filename [max|center|first]")
+    sys.exit("Usage: ./stitch_tiles_nd2.py input_filename [max|center|first]")
 input_filename = sys.argv[1]
 z_projection = sys.argv[2] if len(sys.argv) > 2 else "center"
 if ".nd2" not in input_filename:
@@ -52,7 +52,7 @@ with ND2Reader_SDK(input_filename) as nd2:
         "PhysicalSizeY": nd2.metadata["calibration_um"],
         "Channel": {
             "Name": nd2.metadata["plane_0"]["name"],
-            "Color": rgb_to_hex(nd2.metadata["plane_0"]["rgb_value"])
+            "Color": rgb_to_hex(nd2.metadata["plane_0"]["rgb_value"]),
         },
     }
     pixels_to_micron = nd2.metadata["calibration_um"]
@@ -86,14 +86,14 @@ with ND2Reader_SDK(input_filename) as nd2:
         y1 = y0 + tile_size_pixels
         if z_projection == "max":
             # Do a maximum projection along the Z-axis
-            output_image[0, y0 : y1, x0 : x1] = np.amax(frame, axis=0)[:, ::-1]
+            output_image[0, y0:y1, x0:x1] = np.amax(frame, axis=0)[:, ::-1]
         elif z_projection == "center":
             # Use the Z-slice from the middle of the stack
             z_index = frame.shape[0] // 2
-            output_image[0, y0 : y1, x0 : x1] = frame[z_index, :, ::-1]
+            output_image[0, y0:y1, x0:x1] = frame[z_index, :, ::-1]
         else:
             # Use the first Z-slice from the stack
-            output_image[0, y0 : y1, x0 : x1] = frame[:, ::-1]
+            output_image[0, y0:y1, x0:x1] = frame[:, ::-1]
     print("")
 
 print("Saving output image to file %s..." % output_filename)
