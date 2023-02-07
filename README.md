@@ -37,11 +37,11 @@ or (alternatively)
 
     python stitch_nd2.py input_filename [max|center|first]
 
-The first argument input_filename must be and .nd2 image file. The second optional argument controls what projection type should be used to project Z-stacks from 3D to 2D:
+The first argument input_filename must be an .nd2 image file. The second optional argument controls what projection type should be used to project Z-stacks from 3D to 2D:
 
     max: Use maximum intensity projection along the Z-axis
     center: Use center slice from the Z-stack (default)
-    first: Use first slice from the Z-stack (for fast preview)
+    first: Use first slice from the Z-stack (useful for quick preview)
 
 The output OME-TIFF will be written to a `.ome.tif` having same prefix and location as `input_filename`.
 
