@@ -15,7 +15,7 @@ Start by creating a new project in QuPath, and add the images (OME-TIFF files) t
 
 ![Screenshot](images/screenshot_new_project.png?raw=true)
 
-The Image Combiner Warpy extension uses the multiview feature of QuPath to provide control over the contrast and color (and also channel selection, for multi-channel images) of overlays shown during the registration. Additonal views can be added via `Add row` and `Add column` under `Multi-view` in the menu whown when right-clicking on the image viewport:
+The Image Combiner Warpy extension uses the multiview feature of QuPath to provide control over the contrast and color (and also channel selection, for multi-channel images) of overlays shown during the registration. Additional views can be added via `Add row` and `Add column` under `Multi-view` in the menu whown when right-clicking on the image viewport:
 
 ![Screenshot](images/screenshot_multiview_menu.png?raw=true)
 
@@ -23,11 +23,11 @@ Here we have added rows and columns for a grid of 2x2 views:
 
 ![Screenshot](images/screenshot_multiview_split.png?raw=true)
 
-To open more images, click on the view to select it, and then on the image in the `Image list` panel. Here we have opened the single-channel image `rna_dapi.ome.tif` and the multi-channel image `protein_cropped.ome.tif` in two of the additional views:
+To open another image, click on a view to select it, and then double-click on the image in the `Image list` panel. Here we have opened the single-channel `rna_dapi.ome.tif` and the multi-channel `protein_cropped.ome.tif` in two of the additional views:
 
 ![Screenshot](images/screenshot_multiview_3images.png?raw=true)
 
-(Add text)
+To adjust contrast and color, and select channel for multi-channel imags, use the `Brightness & contrast` setting on each view. Here all images have been changed to grayscale, and the DAPI channel from the multi-channel `protein_cropped.ome.tif` image selected.   
 
 ![Screenshot](images/screenshot_multiview_grayscale.png?raw=true)
 
