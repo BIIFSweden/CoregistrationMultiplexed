@@ -27,7 +27,7 @@ To open another image, click on a view to select it, and then double-click on th
 
 ![Screenshot](images/screenshot_multiview_3images.png?raw=true)
 
-To adjust contrast and color, and select channel for multi-channel imags, use the `Brightness & contrast` setting on each view. Here all images have been changed to grayscale, and the DAPI channel from the multi-channel `protein_cropped.ome.tif` image selected.   
+To adjust contrast and color, and select channel for multi-channel imags, use the `Brightness & contrast` setting on each view. Here all images have been changed to grayscale, and the DAPI channel from the multi-channel `protein_cropped.ome.tif` image has been selected.   
 
 ![Screenshot](images/screenshot_multiview_grayscale.png?raw=true)
 
