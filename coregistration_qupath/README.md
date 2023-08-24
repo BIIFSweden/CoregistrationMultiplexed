@@ -6,7 +6,7 @@
 - QuPath v0.4.x
 - The Image Combiner Warpy extension v0.2.6
 
-To install the Warpy extension in QuPath, download it from [here](https://github.com/BIOP/qupath-extension-warpy/releases/download/0.2.6/qupath-extension-warpy-0.2.6.zip) and drag and drop the extracted JAR-files from the archive onto the QuPath window. If you have an older version of the extension installed since earlier, you can go to `Extensions->Installed extensions` in the menu in QuPath, select `Open extensions directory`, and remove the `qupath-extension-warpy-*.jar` file for the older version.  
+To install the Warpy extension in QuPath, download it from [here](https://github.com/BIOP/qupath-extension-warpy/releases/download/0.2.6/qupath-extension-warpy-0.2.6.zip) and drag and drop the extracted JAR-files from the archive onto the QuPath window. The QuPath documentation also recommends restarting QuPath after installing new extensions. If you have an older version of the extension installed since earlier, you can go to `Extensions->Installed extensions` in the menu in QuPath, select `Open extensions directory`, and remove the `qupath-extension-warpy-*.jar` file for the older version.  
 
 
 ## Using the Image Combiner Warpy extension
@@ -27,11 +27,11 @@ To open another image, click on a view to select it, and then double-click on th
 
 ![Screenshot](images/screenshot_multiview_3images.png?raw=true)
 
-To adjust contrast and color, and select channel for multi-channel imags, use the `Brightness & contrast` setting on each view. Here all images have been changed to grayscale, and the DAPI channel from the multi-channel `protein_cropped.ome.tif` image has been selected.   
+To adjust contrast and color, and select channel for multi-channel images, use the `Brightness & contrast` setting on each view. Here all images have been changed to grayscale, and the DAPI channel from the multi-channel `protein_cropped.ome.tif` image has been selected.   
 
 ![Screenshot](images/screenshot_multiview_grayscale.png?raw=true)
 
-(Add text)
+The Image Combiner Warpy tool should be available under `Analyze->Interactive image combiner warpy`. Before opening the tool, we need to select which image that should be reference for the registration, by clicking on its corresponding view so that it becomes active (indicated by a red outline around the view). The final co-registered image will have the same pixel size and resolution as the reference image. Here is what the tool looks like after opening it with the `dna_dapi.ome.tif` view selected:
 
 ![Screenshot](images/screenshot_hello_warpy.png?raw=true)
 
