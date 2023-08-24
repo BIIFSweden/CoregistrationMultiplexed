@@ -3,8 +3,8 @@
 
 ## File structure
 
-- `stitch_nd2` Python script for performing tile stitching of Nikon ND2 data and converting the result to OME-TIFF format.
-- `coregistration_qupath` Tutorial describing how to perform co-registration of a mix of single-channel and multi-channel OME-TIFF files using Warpy in QuPath.
+- [`stitch_nd2`](stitch_nd2) Python script for performing tile stitching of Nikon ND2 data and converting the result to OME-TIFF format.
+- [`coregistration_qupath`](coregistration_qupath) Tutorial describing how to perform co-registration of a mix of single-channel and multi-channel OME-TIFF files using Warpy in QuPath.
 
 
 ## Python installation (via Anaconda and pip):
