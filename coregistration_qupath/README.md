@@ -39,39 +39,39 @@ After opening the tool, other images from the project can be added by clicking o
 
 ![Screenshot](images/screenshot_warpy_rna_selected.png?raw=true)
 
-(Add text)
+The first step is to provide a coarse manual registration. Hold the `Shift` key and click + drag to move the overlay on top of the reference image. The opacity of the overlay can be controlled via the `Opacity' slider. (Note: here the overlay is also shown in a different color, for better visibilty)
 
 ![Screenshot](images/screenshot_warpy_aligned_coarse.png?raw=true)
 
-(Add text)
+Next, after coarse alignment, we can use `Estimate transform` to try to calculate the final transform. The `Pixel size` field controls at which level of detail the registration will be performed at, which can affect the quality of the estimate. 
 
 ![Screenshot](images/screenshot_warpy_estimate_transform.png?raw=true)
 
-(Add text)
+Here is the registration between the two DAPI images after decreasing `Pixel size` to 10 and then calculating the transform via `Estimate transfrom`:
 
 ![Screenshot](images/screenshot_warpy_aligned_fine.png?raw=true)
 
-After having found a good registration between the two DAPI images, we can transfer the transform matrix to other RNA biomarker images (`rna_a647.ome.tif` in this example), by simply copying the values in the text field `Current affine transform being displayed` from one image to another.  
+After having found a good registration between the two DAPI images, we can transfer the transform matrix to other RNA biomarker images (`rna_a647.ome.tif` in this example), by simply copying the values in the text field `Current affine transform being displayed` from one image to another.
 
 ![Screenshot](images/screenshot_warpy_matrix.png?raw=true)
 
-(Add text)
+Next, we want to repeat the procedure for the third biomarker type (protein). The image `protein_cropped.ome.tif` was captured at a different pixel size (0.5 micron instead of the 0.16 micron) compared to the reference image, and also have a different orientation. The Warpy extension does not take the pixel size into account during the registration, as seen here in the screenshot:
 
 ![Screenshot](images/screenshot_warpy_scale_rotation1.png?raw=true)
 
-(Add text)
+Correction for rotation and scale can be provided via the `Rotation increment` and `Scale increment` fields. (Note that changing these fields can also affect the translation of the image, such that the image disappears outside the visible view) 
 
 ![Screenshot](images/screenshot_warpy_scale_rotation2.png?raw=true)
 
-(Add text)
+After correcting the scale and rotation, we can proceed as we did for the previous `rna_dapi.ome.tif` image, by first manually translating the image for coarse alignment and then performing final registration via `Estimate transform`. 
 
 ![Screenshot](images/screenshot_warpy_scale_rotation3.png?raw=true)
 
-(Add text)
+Important: before creating the final step, we also need to enable all channels in `Brightness & contrast` that were previously unchecked for `protein_cropped.ome.tif`. Otherwise, the Image Combiner Warpy extension will not include them in the combined image. 
 
 ![Screenshot](images/screenshot_warpy_enable_channels_before_create.png?raw=true)
 
-(Add text)
+After done with registration for all images, click create to generate a co-registered combined overlay: 
 
 ![Screenshot](images/screenshot_warpy_created_overlay.png?raw=true)
 
