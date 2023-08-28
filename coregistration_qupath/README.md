@@ -1,5 +1,7 @@
 # Co-registration in QuPath (Tutorial)
 
+By Fredrik Nysjö (SciLifeLab Bio-Image Informatics Facility)
+
 
 ## Pre-requisites
 
