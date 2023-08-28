@@ -55,7 +55,7 @@ After having found a good registration between the two DAPI images, we can trans
 
 ![Screenshot](images/screenshot_warpy_matrix.png?raw=true)
 
-Next, we want to repeat the registration procedure for the third biomarker type (protein). In this case, the image `protein_cropped.ome.tif` was captured at a different pixel spacing (0.5 micron instead of the 0.16 micron) compared to the reference image, and also have a different orientation. The Warpy extension does not take the pixel spacing into account during registration, meaning there will be mismatch in scale, as seen here in the screenshot:
+Next, we want to repeat the registration procedure for the third biomarker type (protein). In this case, the image `protein_cropped.ome.tif` was captured at a different pixel spacing (0.5082 micron instead of the 0.1619 micron) compared to the reference image, and also has a different orientation. The Warpy extension does not take the pixel spacing into account during registration, meaning there will be mismatch in scale, as seen here in the screenshot:
 
 ![Screenshot](images/screenshot_warpy_scale_rotation1.png?raw=true)
 
