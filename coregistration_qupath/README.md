@@ -39,7 +39,7 @@ After opening the tool, other images from the project can be added by clicking o
 
 ![Screenshot](images/screenshot_warpy_rna_selected.png?raw=true)
 
-The first step is to provide a coarse alignment that will be used as input to the automatic registration in Warpy. Hold the `Shift` key and click + drag to interactively move the overlay on top of the reference image. The opacity of the overlay can be controlled via the `Opacity' slider. (Note: here the overlay is also shown in a different color, for better visibilty)
+The first step is to provide a coarse alignment that will be used as input to the automatic registration in Warpy. In the viewport, hold the `Shift` key and click + drag to interactively move the overlay displayed on top of the reference image. The opacity of the overlay can be controlled via the `Opacity' slider. (Note: here the overlay is also shown in a different color, for better visibilty)
 
 ![Screenshot](images/screenshot_warpy_aligned_coarse.png?raw=true)
 
