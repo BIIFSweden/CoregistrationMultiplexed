@@ -15,7 +15,7 @@ Start by creating a new project in QuPath, and add the images (OME-TIFF files) t
 
 ![Screenshot](images/screenshot_new_project.png?raw=true)
 
-The Image Combiner Warpy extension uses the multiview feature of QuPath to provide control over the contrast and color (and also channel selection, for multi-channel images) of overlays shown during the registration. Additional views can be added via `Add row` and `Add column` under `Multi-view` in the menu whown when right-clicking on the image viewport:
+The Image Combiner Warpy extension uses the multiview feature of QuPath to provide control over the contrast and color (and also channel selection, for multi-channel images) of overlays shown during the registration. Additional views can be added via `Add row` and `Add column` under `Multi-view` in the menu when right-clicking on the image viewport:
 
 ![Screenshot](images/screenshot_multiview_menu.png?raw=true)
 
@@ -47,7 +47,7 @@ Next, after coarse alignment, we can use `Estimate transform` to try to calculat
 
 ![Screenshot](images/screenshot_warpy_estimate_transform.png?raw=true)
 
-Here is the registration between the two DAPI images after decreasing `Pixel size` to 10 and then calculating the transform via `Estimate transfrom`:
+Here is the registration between the two DAPI images after decreasing `Pixel size` to 10 and then calculating the transform via `Estimate transform`:
 
 ![Screenshot](images/screenshot_warpy_aligned_fine.png?raw=true)
 
@@ -67,7 +67,7 @@ After correcting the scale and rotation, we can proceed as we did for the previo
 
 ![Screenshot](images/screenshot_warpy_scale_rotation3.png?raw=true)
 
-Important: before creating the final step, we also need to enable all channels in `Brightness & contrast` that were previously unchecked for `protein_cropped.ome.tif`. Otherwise, the Image Combiner Warpy extension will not include them in the combined image. 
+Important: before the final step, we also need to enable all channels in `Brightness & contrast` that were previously unchecked for `protein_cropped.ome.tif`. Otherwise, the Image Combiner Warpy extension will not include them in the combined image. 
 
 ![Screenshot](images/screenshot_warpy_enable_channels_before_create.png?raw=true)
 
